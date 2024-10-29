@@ -1,3 +1,5 @@
+#파이썬에서 워드 문서 읽기
+
 import docx
 import word
 
@@ -7,9 +9,9 @@ print('Document in full :\n',word.getTextWord(docName))
 doc = docx.Document(docName)
 print('Number of paragraphs :',len(doc.paragraphs))
 print('Paragraph 2:',doc.paragraphs[1].text)
-print('Paragraph 2 style:',doc.paragraphs[1].style)
+print('Paragraph 2 style:',doc.paragraphs[1].style) #단락 스타일
 print('Paragraph 1:',doc.paragraphs[0].text)
-print('Number of runs in paragraph 1:',len(doc.paragraphs[0].runs))
+print('Number of runs in paragraph 1:',len(doc.paragraphs[0].runs)) #같은 스타일 끼리 묶는것 
 for idx, run in enumerate(doc.paragraphs[0].runs):
     print('Run %s : %s' %(idx,run.text))
 

@@ -1,3 +1,5 @@
+#문자열 연산 심화
+
 str = 'NLTK Dolly Python'
 print('Substring ends at:',str[:4])
 

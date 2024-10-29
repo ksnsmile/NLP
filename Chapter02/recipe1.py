@@ -1,3 +1,5 @@
+#문자열 연산의 중요성
+
 namesList = ['Tuffy','Ali','Nysha','Tim' ]
 sentence = 'My dog sleeps on sofa'
 
