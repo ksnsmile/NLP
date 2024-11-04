@@ -1,3 +1,5 @@
+#두 단문 처리와 둘 사이의 공통 어휘 추출
+
 story1 = """In a far away kingdom, there was a river. This river was home to many golden swans. The swans spent most of their time on the banks of the river. Every six months, the swans would leave a golden feather as a fee for using the lake. The soldiers of the kingdom would collect the feathers and deposit them in the royal treasury. 
 One day, a homeless bird saw the river. "The water in this river seems so cool and soothing. I will make my home here," thought the bird. 
 As soon as the bird settled down near the river, the golden swans noticed her. They came shouting. "This river belongs to us. We pay a golden feather to the King to use this river. You can not live here." 
@@ -17,8 +19,8 @@ The King then disguised himself and went out into the street. There he tried hel
 Suddenly, the King heard the golden swan’s voice, “Do good deeds and you will come to heaven." It dawned on the King that by doing selfish acts, he will not go to heaven. 
 He realized that his people needed him and carrying out his duties was the only way to heaven. After that day he became a responsible King. 
 """
-
-story1 = story1.replace(",", "").replace("\n", "").replace('.', '').replace('"', '').replace("!","").replace("?","").casefold()
+#전체 문자열을 소문자로 바꾼다 casefolod를 사용해서
+story1 = story1.replace(",", "").replace("\n", "").replace('.', '').replace('"', '').replace("!","").replace("?","").casefold() 
 story2 = story2.replace(",", "").replace("\n", "").replace('.', '').replace('"', '').replace("!","").replace("?","").casefold()
 
 story1_words = story1.split(" ")
