@@ -1,9 +1,11 @@
+#딕셔너리 생성, 반전, 사용
+
 import nltk
 
 class LearningDictionary():
     def __init__(self, sentence):
         self.words = nltk.word_tokenize(sentence)
-        self.tagged = nltk.pos_tag(self.words)
+        self.tagged = nltk.pos_tag(self.words) #(단어,품사)
         self.buildDictionary()
         self.buildReverseDictionary()
 
@@ -39,7 +41,7 @@ pos = ["NN", "VBS", "NNS"]
 for word in words:
     status = learning.isWordPresent(word)
     print("Is '{}' present in dictionary ? : '{}'".format(word, status))
-    if status is True:
+    if status =='Yes':
         print("\tPOS For '{}' is '{}'".format(word, learning.getPOSForWord(word)))
 for pword in pos:
     print("POS '{}' has '{}' words".format(pword, learning.getWordsForPOS(pword)))

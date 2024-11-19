@@ -1,3 +1,5 @@
+#의존 문법과 투사 의존성 구문 분석
+
 import nltk
 
 grammar = nltk.grammar.DependencyGrammar.fromstring("""

@@ -1,3 +1,5 @@
+#문맥 기반 품사 태거 작성
+
 import nltk
 sentences = [
     "What is your address when you're in Bangalore?",
@@ -15,6 +17,7 @@ def getSentenceWords():
         sentwords.append(words)
     return sentwords
 def noContextTagger():
+    #단어를 품사로 태깅하는 모델 훈련
     tagger = nltk.UnigramTagger(getSentenceWords())
     print(tagger.tag('the little remarks towards assembly are laughable'.split()))
 def withContextTagger():

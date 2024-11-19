@@ -1,3 +1,8 @@
+#재귀 CFG 작성
+
+#재귀(Recursion)는 어떤 함수나 규칙이 자기 자신을 다시 호출하는 것
+
+
 import nltk
 import string
 from nltk.parse.generate import generate

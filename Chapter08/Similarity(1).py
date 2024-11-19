@@ -1,3 +1,5 @@
+#텍스트 유사도 문제 해결
+# 용어 빈도 : TF, 역 문서 빈도 : IDF
 import nltk
 import math
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -20,7 +22,7 @@ class TextSimilarityExample:
             dictionary[key] = norm
         return dictionary
 
-    def IDF(self):
+    def IDF(self): # 전체 문서 집합에서 특정 단어가 얼마나 드물게 등장하는지 높을수록 그 단어가 적게 나타났다는것 
         def idf(TotalNumberOfDocuments, NumberOfDocumentsWithThisWord):
             return 1.0 + math.log(TotalNumberOfDocuments/NumberOfDocumentsWithThisWord)
         numDocuments = len(self.statements)
@@ -36,7 +38,7 @@ class TextSimilarityExample:
             idfValues[word] = idf(numDocuments, uniqueWords[word])
         return idfValues
 
-    def TF_IDF(self, query):
+    def TF_IDF(self, query): # TF-IDF: TF와 IDF 값을 곱하여 각 단어의 중요도를 계산합니다. TF 얼마나 자주 나타나는지 
         words = nltk.word_tokenize(query.lower())
         idf = self.IDF()
         vectors = {}

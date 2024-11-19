@@ -1,3 +1,5 @@
+#피처셋 선택
+
 import nltk
 import random
 
@@ -27,6 +29,7 @@ def learnSimpleFeatures():
         feature = vehicleNumberFeature(num)
         print("(simple) %s is of type %s" %(num, classifier.classify(feature)))
 
+# 더 정교함 추가적인 feature더 넣어서 
 def learnFeatures():
     def vehicleNumberFeature(vnumber):
         return {

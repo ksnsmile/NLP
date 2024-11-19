@@ -1,3 +1,5 @@
+#문서 분류
+
 import nltk
 import random
 import feedparser
@@ -8,6 +10,8 @@ urls = {
 }
 
 feedmap = {}
+
+# stopwords(예: "a", "an", "the", "in", "on", "and", "but" )
 stopwords = nltk.corpus.stopwords.words('english')
 
 def featureExtractor(words):
